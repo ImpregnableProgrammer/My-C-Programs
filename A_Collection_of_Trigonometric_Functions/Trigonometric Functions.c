@@ -3,10 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h> /* Only included for access to built-in Sin, Cos, and Tan functions to compare my functions' answers to */
-#define PI 3.141592653589793238462643383279502884
-
 #ifndef M_PI
-#define M_PI 3.14159265358979323846263279
+#define M_PI 3.14159265358979323846264338327950288
 #endif
 
 double Remainder(double y,double k){
