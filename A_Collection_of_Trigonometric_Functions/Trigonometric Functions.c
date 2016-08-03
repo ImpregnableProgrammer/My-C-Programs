@@ -5,6 +5,10 @@
 #include <math.h> /* Only included for access to built-in Sin, Cos, and Tan functions to compare my functions' answers to */
 #define PI 3.141592653589793238462643383279502884
 
+#ifndef M_PI
+#define M_PI 3.14159265358979323846263279
+#endif
+
 double Remainder(double y,double k){
   double x = 0;
   double j = 0;
@@ -59,8 +63,8 @@ int main(int argc, char *argv[]){
   float u;
   u = atof(argv[1]);
   float T = u;
-  u = atof(argv[2])==1.0 ? (u*PI)/180 : u;
-  u = Remainder(u,PI*2);
+  u = atof(argv[2])==1.0 ? (u*M_PI)/180 : u;
+  u = Remainder(u,M_PI*2);
   char *y = atof(argv[2])==1.0 ? "degrees" : "radians";
   if(strcmp(argv[3],"Sin")==0){
       printf("Sin(%f) in %s from function = %.15f\nSin(%f) in %s from built-in = %.15f\n",T,y,Sin_x(u),T,y,sin(u));
