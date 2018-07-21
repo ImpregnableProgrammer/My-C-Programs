@@ -1,2 +1,2 @@
 # My-C-Programs
-A collection of various programs I created in C in Emacs. Protected under the GNU General Public License v3.
+A repository containing the various programs I wrote in the C programming language using the GNU Emacs text editor.
