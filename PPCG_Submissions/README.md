@@ -1,2 +1,2 @@
-# PPCG_Challenges
+# PPCG Submissions
 A directory containing my submissions in the C programming language to various challenges on [Programming Puzzles and Code Golf (PPCG)](https://codegolf.stackexchange.com), a burgeoning community of hobbyist and professional programmers who pose and complete a variety of programming puzzles, often with the objective of optimizing the the amount of code used in a wide array of practical and esoteric programming languages through a process known as "code golfing."
