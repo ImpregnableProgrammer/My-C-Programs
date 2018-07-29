@@ -20,6 +20,8 @@ void HipRoof(char **bitmap) {
 
 int main(int argc, char **argv) {
   argv += 1;
+  char* hi = "hello";
+  //printf("%d\n", *argv == NULL);
   HipRoof(argv);
   return 0;
 }
