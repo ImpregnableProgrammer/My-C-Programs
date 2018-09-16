@@ -141,7 +141,7 @@ int BreadthFirstCount(int L) {
 //////////////////////////////////////////////////////////////////////////////////////////
 // An optimal iterative solution.                                                       //
 // However, this is subject to overflow of the unsigned long long integer type, which   //
-// seems to occur at around an input of 52.                                             //
+// seems to occur at around an input of 52, during the calculation of the `Sum`.        //
 //////////////////////////////////////////////////////////////////////////////////////////
 
 typedef unsigned long long LONG;
@@ -174,7 +174,7 @@ LONG CountFinal(int L) {
 // An efficient string-based iterative solution.                //
 // This was created in an attempt to overcome integer overflow. //
 // However, because of errors in memory allocation, this may    //
-// still produce erroneous results, though rarely so.           //
+// still produce erroneous results, though very rarely so.      //
 //////////////////////////////////////////////////////////////////
 
 // Return the length of the given string `str`.
@@ -217,7 +217,7 @@ char* Allocate(char** array2, int index, char** array, int first, int second, in
 }
 
 // The main counting method.
-char* CountFinalString(int L) {
+char* CountFinal_String(int L) {
   char **arr = malloc(10 * sizeof(char*));
   for(int i = 0;i < 10;arr[i++] = "1");
   while(L > 1) {
@@ -243,12 +243,13 @@ char* CountFinalString(int L) {
 int main() {
   //printf("%ld\n", RecursiveCount(4));
   //printf("%d\n", BreadthFirstCount(3));
+  printf("Non-string-based `CountFinal` method:\n");
   for(int i = 1;i <= 52; ++i)
     printf("%d => %llu\n", i, CountFinal(i));
-  printf("\n");
-  for(int i = 1; i <= 200; ++i)
-    printf("%d => %s\n", i, CountFinalString(i));
-  
+  printf("\n\nString-based `CountFinal_String` method:\n");
+  for(int i = 1; i <= 68; ++i)
+    printf("%d => %s\n", i, CountFinal_String(i));
+
   // Testing for `AddToArray`
   /*
   int *a = malloc(3 * sizeof(int));
